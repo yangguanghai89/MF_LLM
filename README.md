@@ -83,7 +83,13 @@ MF-LLM/
 ├── call_qwen.py              # Qwen API wrapper
 ├── model_inference.py        # Local model inference wrapper
 ├── data/                     # Data directory
+│   ├── train.tsv             # Original training data
+│   ├── dev.tsv               # Original verification data
+│   ├── test.tsv              # Original test data
+│   ├── test_qrels.txt        # Correlation label (QRELS)
+│   └── ipc.tsv               # IPC classification table
 └── models/                   # Pre-trained model directory
+│   ├──  bge-small-en-v1.5/   # BGE model
 ```
 
 ## 🛠️ Requirements
