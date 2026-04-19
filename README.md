@@ -49,6 +49,7 @@ Configuration:
 Modify prompt.py to adjust the prompt template (gen_entity_zh / gen_entity_en).
 
 Run Command:
+```bash
 python n1_Build_Entity.py \
     --generation_type "entity" \
     --model_import_type "api" \
@@ -56,18 +57,28 @@ python n1_Build_Entity.py \
     --api_key "YOUR_API_KEY" \
     --output_path "./data/train_with_entity.tsv" \
     --language "en"
+```
 
 Step 2: IPC Description Enhancement
 Maps IPC codes to their natural language descriptions to enrich semantic information.
-Run Command:python n2_Build_IPCdescription.py
+Run Command:
+```bash
+python n2_Build_IPCdescription.py
+```
 
 Step 3: Vector Generation
 Generates embeddings by fusing Title, Abstract, IPC Descriptions, and Entities using the BGE model.
-Run Command:python n3_process.py
+Run Command:
+```bash
+python n3_process.py
+```
 
 Step 4: Evaluation
 Loads the generated vectors to calculate cosine similarity, performs Top-K re-ranking, and computes metrics (Recall, MAP, etc.).
-Run Command:python n4_test.py
+Run Command:
+```bash
+python n4_test.py
+```
 
 ## 📂 Project Structure
 
