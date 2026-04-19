@@ -23,6 +23,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Data Preparation
+You can download our dataset at this address: https://pan.baidu.com/s/1J9b3SHju7dYq5o6zq1yv_A?pwd=c877
 Please organize your data files into the data/ directory as follows:
 
 ```text
@@ -35,9 +36,18 @@ Please organize your data files into the data/ directory as follows:
 ```
 
 ### 3. Model Preparation
-The system relies on the BGE model for embedding generation.
-Model: bge-small-en-v1.5
-Path: Please download the model and place it in the models/bge-small-en-v1.5/ directory.
+The system relies on the BGE model for embedding generation. You can download it automatically using the Hugging Face CLI.
+
+**Run the following commands:**
+
+```bash
+# 1. Install Hugging Face Hub (if not installed)
+pip install huggingface_hub
+
+# 2. Download the model (using mirror for faster speed in China)
+export HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download BAAI/bge-small-en-v1.5 --local-dir ./models/bge-small-en-v1.5
+```
 
 ## ⚙️ Pipeline & Usage
 
